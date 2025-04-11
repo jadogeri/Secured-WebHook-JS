@@ -28,16 +28,10 @@ const verifySignature = (secret, payload, signature) => {
 // Middleware to verify the webhook tooken, signature and timestamp of incoming webhook requests
 const verifyWebhookMiddleware = (webhookToken, secret, timeDifference) => {
     return (req, res, next) => {
-        console.log("req========",req.headers)
         const token = req.headers['x-webhook-token'];
         const signature = req.headers['x-signature'];
         const timestamp = req.headers['x-timestamp'];
         const payload = req.body;
-
-        console.log("data sent from request, ","signature = ",signature," , timestamp = ", timestamp, " , payload = ",payload );
-        console.log("check if token..........................")
-        console.log("token == ", token,"    , webhookToken == ",webhookToken, " , secret== ", secret)
-
 
         // Check if webhook teken headers is missing or invalid
         if (!token || token !== webhookToken) {
