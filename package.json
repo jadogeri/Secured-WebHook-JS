@@ -1,0 +1,29 @@
+{
+  "name": "secured-webhook-js",
+  "version": "1.0.0",
+  "description": "Secured WebHook Application (node + express) written in Javascript",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node index.js",
+    "dev": "nodemon index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/jadogeri/Secured-WebHook-JS.git"
+  },
+  "author": "Joseph Adogeri",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/jadogeri/Secured-WebHook-JS/issues"
+  },
+  "homepage": "https://github.com/jadogeri/Secured-WebHook-JS#readme",
+  "dependencies": {
+    "body-parser": "^2.2.0",
+    "cors": "^2.8.5",
+    "crypto": "^1.0.1",
+    "dotenv": "^16.5.0",
+    "express": "^5.1.0",
+    "nodemon": "^3.1.9"
+  }
+}
